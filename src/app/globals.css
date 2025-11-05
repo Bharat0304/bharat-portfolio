@@ -245,6 +245,26 @@
   font-size: var(--blog-font-size);
 }
 
+/* Site-wide subtle grid background */
+.background-grid {
+  background-color: var(--background);
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px),
+    radial-gradient(ellipse at 40px 50%, rgba(59,130,246,0.15), transparent 50%),
+    radial-gradient(ellipse at 60px 50%, rgba(16,185,129,0.12), transparent 50%);
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+.dark .background-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px),
+    radial-gradient(ellipse at 40px 50%, rgba(59,130,246,0.18), transparent 50%),
+    radial-gradient(ellipse at 60px 50%, rgba(16,185,129,0.14), transparent 50%);
+}
+
 .prose p,
 .prose li,
 .prose blockquote {

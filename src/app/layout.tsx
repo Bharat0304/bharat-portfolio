@@ -24,7 +24,7 @@ export default function RootLayout({
           <link rel="shortcut icon" href="/assets/profile.png" />
           <link rel="apple-touch-icon" href="/assets/profile.png" />
         </head>
-        <body className={`font-hanken-grotesk antialiased`}>
+        <body className={`font-hanken-grotesk antialiased background-grid`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
