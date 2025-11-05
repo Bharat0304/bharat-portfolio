@@ -64,26 +64,29 @@ export default function SetupPage() {
               <div className="ml-4 sm:ml-8 md:ml-16 space-y-3 md:space-y-4">
                 {step.content.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    {item.type === 'download' && (
-                      <Link
-                        href={item.href || '#'}
-                        download
-                        className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 md:p-4 bg-muted/50 rounded-lg border border-black/10 dark:border-white/10 w-full hover:bg-muted/70 transition-colors"
-                      >
-                        <Download className="size-4 text-muted-foreground flex-shrink-0" />
-                        <div className="flex-1">
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                            <span className="font-medium text-sm">
-                              {item.name}
-                            </span>
-                            <ExternalLink className="size-3 text-muted-foreground" />
+                    {item.type === 'download' && (() => {
+                      const d = item as { type: 'download'; name: string; description: string; href: string };
+                      return (
+                        <Link
+                          href={d.href || '#'}
+                          download
+                          className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 md:p-4 bg-muted/50 rounded-lg border border-black/10 dark:border-white/10 w-full hover:bg-muted/70 transition-colors"
+                        >
+                          <Download className="size-4 text-muted-foreground flex-shrink-0" />
+                          <div className="flex-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                              <span className="font-medium text-sm">
+                                {d.name}
+                              </span>
+                              <ExternalLink className="size-3 text-muted-foreground" />
+                            </div>
+                            <p className="text-sm text-muted-foreground mt-1">
+                              {d.description}
+                            </p>
                           </div>
-                          <p className="text-sm text-muted-foreground mt-1">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    )}
+                        </Link>
+                      );
+                    })()}
 
                     {item.type === 'instruction' && (
                       <div className="flex items-center gap-3">
