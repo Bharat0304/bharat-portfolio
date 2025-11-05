@@ -11,8 +11,8 @@ export const ctaConfig = {
   profileAlt: 'Profile',
 
   // CTA button settings
-  linkText: 'Book a Free Call',
-  calLink: '#',
+  linkText: 'Chat with me',
+  calLink: 'https://wa.me/919811986869',
 
   // Pre-text message
   preText: "Hey, you scrolled this far, let's talk.",

@@ -70,6 +70,11 @@ export const heroConfig = {
       component: 'ReactIcon',
     },
     {
+      name: 'MongoDB',
+      href: 'https://www.mongodb.com/',
+      component: 'MongoDB',
+    },
+    {
       name: 'Next.js',
       href: 'https://nextjs.org/',
       component: 'NextJs',
@@ -89,7 +94,7 @@ export const heroConfig = {
   // Description Configuration
   description: {
     template:
-      'Full-Stack Developer who loves turning complex ideas into clean, functional, and impactful web applications.',
+      'I build projects using {skills:0}, {skills:1}, and {skills:2}. Full-Stack Developer who loves turning complex ideas into clean, functional, and impactful web applications.',
   },
 
   // Buttons Configuration

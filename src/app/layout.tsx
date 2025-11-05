@@ -18,6 +18,12 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <link rel="icon" href="/assets/profile.png" sizes="32x32" type="image/png" />
+          <link rel="icon" href="/assets/profile.png" sizes="16x16" type="image/png" />
+          <link rel="shortcut icon" href="/assets/profile.png" />
+          <link rel="apple-touch-icon" href="/assets/profile.png" />
+        </head>
         <body className={`font-hanken-grotesk antialiased`}>
           <ThemeProvider
             attribute="class"

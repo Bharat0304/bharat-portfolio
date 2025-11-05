@@ -56,6 +56,10 @@ export default function CTA({
     if (isMobile()) {
       triggerHaptic('medium');
     }
+    if (calLink && (calLink.startsWith('http') || calLink.includes('wa.me'))) {
+      window.open(calLink, '_blank', 'noopener,noreferrer');
+      return;
+    }
     setShowCalPopup(true);
   };
 

@@ -55,9 +55,9 @@ export default function Hero() {
       <Image
         src={avatar}
         alt="hero"
-        width={100}
-        height={100}
-        className="size-24 rounded-full dark:bg-yellow-300 bg-blue-300"
+        width={144}
+        height={144}
+        className="size-36 rounded-full dark:bg-yellow-300 bg-blue-300"
       />
 
       {/* Text Area */}

@@ -18,6 +18,7 @@ export const mySkills = [
   <NodeJs key="nodejs" />,
   <PostgreSQL key="postgresql" />,
   <Prisma key="prisma" />,
+  
 ];
 
 export const about = {

@@ -42,27 +42,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             height={1080}
           />
           {project.video && (
-            <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-              <DialogTrigger asChild>
-                <div className="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:backdrop-blur-xs">
-                  <button className="flex size-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-colors duration-200 group-hover:cursor-pointer hover:bg-white/30">
-                    <PlayCircle />
-                  </button>
-                </div>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full p-0 border-0">
-                <div className="aspect-video w-full">
-                  <video
-                    className="h-full w-full object-cover rounded-lg"
-                    src={project.video}
-                    autoPlay
-                    loop
-                    controls
-                  />
-                </div>
-                <DialogTitle className="sr-only">{project.title}</DialogTitle>
-              </DialogContent>
-            </Dialog>
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:backdrop-blur-xs pointer-events-none">
+              <div className="flex size-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                <PlayCircle />
+              </div>
+            </div>
           )}
         </div>
       </CardHeader>
@@ -71,24 +55,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-4">
           {/* Project Header - Title and Icons */}
           <div className="flex items-center justify-between gap-4">
-            <Link href={project.projectDetailsPageSlug}>
-              <h3 className="text-xl font-semibold leading-tight group-hover:text-primary hover:cursor-pointer">
+            <span>
+              <h3 className="text-xl font-semibold leading-tight">
                 {project.title}
               </h3>
-            </Link>
+            </span>
             <div className="flex items-center gap-2">
               <Tooltip>
                 <TooltipTrigger>
-                  <Link
-                    className="text-secondary flex size-6 items-center justify-center hover:text-primary transition-colors"
-                    href={project.link}
-                    target="_blank"
-                  >
+                  <div className="text-secondary flex size-6 items-center justify-center">
                     <Website />
-                  </Link>
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>View Website</p>
+                  <p>Website</p>
                 </TooltipContent>
               </Tooltip>
               <Tooltip>
@@ -98,6 +78,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                       className="text-secondary flex size-6 items-center justify-center hover:text-primary transition-colors"
                       href={project.github}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github />
                     </Link>
@@ -157,12 +138,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </>
             )}
           </div>
-          <Link
-            href={project.projectDetailsPageSlug}
-            className="text-secondary flex items-center gap-2 text-sm hover:underline underline-offset-4 hover:text-primary transition-colors"
-          >
+          <span className="text-secondary flex items-center gap-2 text-sm">
             View Details <ArrowRight className="size-4" />
-          </Link>
+          </span>
         </CardFooter>
       )}
     </Card>

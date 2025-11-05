@@ -159,6 +159,11 @@ export function generateMetadata(pathname: string) {
     keywords: pageMeta.keywords?.join(', '),
     authors: [{ name: siteConfig.author.name }],
     creator: siteConfig.author.name,
+    icons: {
+      icon: '/assets/favicon.ico',
+      shortcut: '/assets/favicon.ico',
+      apple: heroConfig.avatar,
+    },
     openGraph: {
       type: 'website',
       url: `${siteConfig.url}${pathname}`,
