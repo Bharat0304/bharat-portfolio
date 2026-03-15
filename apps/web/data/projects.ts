@@ -13,7 +13,7 @@ const projects = [
         description:
             "Smart Employee Shift Planner — automated scheduling system for teams of 5–50 members with ~90% accuracy.",
         tech: "React, Flask, LangChain, MongoDB, JWT, OpenAI API",
-        
+        image: "",
         link: "https://github.com/Bharat0304",
     },
     {
