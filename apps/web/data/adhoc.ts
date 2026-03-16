@@ -18,7 +18,7 @@ const highlights = [
         title: "Research — NCI-TIDE 2025",
         description:
             "Presented 'Blockchain-Enabled Federated Learning Framework for Ensuring Data Integrity in Digital Metrology Systems' at NCI-TIDE 2025.",
-        link: "",
+        link: "https://drive.google.com/file/d/1M8_J8S3OhpTbV-sSI00j8RGRH9_kiTRx/view?usp=sharing",
     },
 ];
 
