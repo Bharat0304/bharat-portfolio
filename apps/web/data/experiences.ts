@@ -1,20 +1,20 @@
 const experiences = [
     {
         image: "",
-        title: "ALA MODE Technologies Pvt. Ltd.",
-        subtitle: "Web Developer Intern",
-        description: "Optimized website performance, fixed UI/UX bugs, and improved SEO.",
+        title: "Maruti Suzuki India Limited",
+        subtitle: "AI Intern | On-site",
+        description: "Built offline reconciliation tool and semantic row-matching pipeline.",
         link: "",
-        duration: "Jun 2025 – Jul 2025",
+        duration: "Jul 2026 - Sep 2026",
         details: [
-            "Optimized company website performance and responsiveness across devices.",
-            "Fixed UI/UX issues, broken layouts, and cross-browser bugs.",
-            "Redesigned product grids and navigation using JavaScript.",
-            "Improved SEO using meta tags, schema markup, alt-texts, and internal linking.",
-            "Integrated analytics tools to track user behavior.",
-            "Collaborated with teams and maintained project documentation using GitHub.",
+            "Built a fully offline reconciliation tool that matches Maruti Suzuki GSIS-P inspection Excel data against SMIR/MIS PDF source-of-truth reports, reducing manual validation effort by approximately 25%.",
+            "Implemented OCR-based table extraction (RapidOCR / PP-OCRv6) with a Docling fallback engine to parse scanned inspection PDFs, alongside pdfplumber for digital PDF sources.",
+            "Designed a semantic row-matching pipeline using sentence-transformers (all-MiniLM-L6-v2) embeddings combined with Needleman-Wunsch sequence alignment to accurately map Excel rows to their corresponding PDF records.",
+            "Built a deterministic tolerance and limit parser to validate dimensions, MIN/MAX ranges, and signed deviations, and developed a human-in-the-loop review workflow for flagging and correcting unmatched data.",
+            "Wrote a regression test suite covering limit rules and dimension-matching accuracy to ensure reliability before each release."
         ],
     },
+
 ];
 
 export default experiences;

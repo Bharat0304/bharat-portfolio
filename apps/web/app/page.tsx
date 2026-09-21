@@ -19,6 +19,7 @@ import {
   ExternalLink,
   MapPin,
   Code2,
+  FileText,
 } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -69,42 +70,62 @@ const highlightEmojis = ["🏆", "👨‍💻", "📄"]
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["C", "C++", "Python", "JavaScript", "TypeScript", "Java"],
+    skills: ["JavaScript", "TypeScript", "Python", "C++", "Java", "SQL", "Shell Scripting"],
   },
   {
-    title: "Web Dev",
+    title: "Frontend",
+    skills: ["React.js", "Next.js", "HTML", "CSS", "Tailwind CSS"],
+  },
+  {
+    title: "Backend",
     skills: [
-      "React.js",
-      "Next.js",
       "Node.js",
       "Express.js",
-      "Tailwind CSS",
-      "Vite",
       "FastAPI",
       "REST APIs",
+      "WebSockets",
+      "WebRTC"
     ],
   },
   {
-    title: "Tools & Tech",
+    title: "Databases",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Prisma ORM"
+    ],
+  },
+  {
+    title: "DevOps & Cloud",
+    skills: [
+      "Docker",
+      "Linux",
+      "Nginx",
+      "AWS",
+      "Kubernetes",
+      "CI/CD"
+    ],
+  },
+  {
+    title: "Observability",
+    skills: [
+      "Prometheus",
+      "Grafana",
+      "OpenTelemetry"
+    ],
+  },
+  {
+    title: "Tools",
     skills: [
       "Git",
       "GitHub",
-      "Prisma ORM",
-      "MongoDB",
-      "SQL",
-      "Docker",
-      "DevOps",
+      "Postman",
+      "Swagger/OpenAPI",
+      "VS Code",
       "Turborepo",
-    ],
-  },
-  {
-    title: "AI / ML",
-    skills: [
-      "NumPy",
-      "Pandas",
-      "Scikit-learn",
-      "TensorFlow",
-      "PyTorch",
+      "Jest"
     ],
   },
 ]
@@ -188,6 +209,11 @@ export default function HomePage() {
                   href: "mailto:k.bharatkumar815@gmail.com",
                   icon: Mail,
                   label: "Email",
+                },
+                {
+                  href: "https://drive.google.com/file/d/1r6GU2Mg7brZnRFiwXJrIOQtiDhHxPfxi/view?usp=sharing",
+                  icon: FileText,
+                  label: "Resume",
                 },
               ].map(({ href, icon: Icon, label }) => (
                 <Link

@@ -8,13 +8,6 @@ const highlights = [
     },
     {
         image: "",
-        title: "Technical Head — GFG MSIT Chapter",
-        description:
-            "Organized coding sessions, contests, and technical interview preparation events at GeeksforGeeks On-Campus Chapter.",
-        link: "",
-    },
-    {
-        image: "",
         title: "Research — NCI-TIDE 2025",
         description:
             "Presented 'Blockchain-Enabled Federated Learning Framework for Ensuring Data Integrity in Digital Metrology Systems' at NCI-TIDE 2025.",
